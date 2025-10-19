@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宋志翔 - 自我介绍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .card-hover {
+                @apply hover:shadow-lg hover:-translate-y-1 transition-custom;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-dark">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-custom">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-primary flex items-center">
+                <i class="fa fa-user-circle mr-2"></i>
+                <span>宋志翔</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-primary transition-custom">关于我</a>
+                <a href="#skills" class="hover:text-primary transition-custom">技能</a>
+                <a href="#projects" class="hover:text-primary transition-custom">项目</a>
+                <a href="#awards" class="hover:text-primary transition-custom">奖项</a>
+                <a href="#contact" class="hover:text-primary transition-custom">联系我</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-dark">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#about" class="py-2 hover:text-primary transition-custom">关于我</a>
+                <a href="#skills" class="py-2 hover:text-primary transition-custom">技能</a>
+                <a href="#projects" class="py-2 hover:text-primary transition-custom">项目</a>
+                <a href="#awards" class="py-2 hover:text-primary transition-custom">奖项</a>
+                <a href="#contact" class="py-2 hover:text-primary transition-custom">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="pt-28 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow mb-4">
+                        宋志翔
+                    </h1>
+                    <h2 class="text-[clamp(1.2rem,3vw,1.8rem)] text-gray-600 mb-6">
+                        华侨大学 | 智能制造工程专业
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-8 max-w-lg">
+                        专注于智能制造与人工智能技术应用，具备扎实的工程实践能力和创新思维，
+                        致力于将技术转化为实际解决方案。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-custom flex items-center">
+                            <i class="fa fa-envelope mr-2"></i> 联系我
+                        </a>
+                        <a href="#projects" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/5 transition-custom flex items-center">
+                            <i class="fa fa-folder-open mr-2"></i> 查看项目
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                            <img src="https://picsum.photos/id/1005/400/400" alt="宋志翔照片" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-3 -right-3 bg-secondary text-white p-3 rounded-lg shadow-lg">
+                            <i class="fa fa-graduation-cap text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 关于我 -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">关于我</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        我是华侨大学智能制造工程专业的一名本科生，对智能控制系统、机器人技术和人工智能应用有着浓厚的兴趣。
+                        在校期间，我不仅认真学习专业知识，还积极参与各类科研项目和学科竞赛，将理论知识与实践相结合。
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        作为班级学习委员，我组织了多项学术活动，提升了班级的整体学习氛围，并带领班级获得"优秀学术氛围班级"称号。
+                        我具备良好的团队协作能力和沟通能力，在多个团队项目中担任核心成员，负责关键技术的实现。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        未来，我希望能够在智能制造领域继续深造和发展，运用所学知识解决实际工程问题，为行业发展贡献自己的力量。
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                        <div class="bg-light p-6 rounded-lg text-center card-hover">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-book text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">教育背景</h3>
+                            <p class="text-gray-600">华侨大学<br>智能制造工程专业<br>GPA: 3.9 (专业前20%)</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg text-center card-hover">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-cogs text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">专业技能</h3>
+                            <p class="text-gray-600">机器人系统开发<br>Python编程<br>机器学习应用<br>智能制造系统</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg text-center card-hover">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-trophy text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">荣誉奖项</h3>
+                            <p class="text-gray-600">国家励志奖学金<br>全国工程实践竞赛一等奖<br>数学建模竞赛M奖</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能 -->
+        <section id="skills" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">专业技能</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        我掌握了多种与智能制造相关的技术和工具，能够熟练应用于实际项目开发中
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    <!-- 技术技能 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 flex items-center">
+                            <i class="fa fa-code text-primary mr-2"></i> 技术技能
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Python编程</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">机器人系统开发</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">机器学习</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">3D建模与仿真</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">信号处理</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 工具与证书 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 flex items-center">
+                            <i class="fa fa-wrench text-primary mr-2"></i> 工具与证书
+                        </h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center card-hover">
+                                <i class="fa fa-cad text-primary text-2xl mr-3"></i>
+                                <span>CAD/SolidWorks</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center card-hover">
+                                <i class="fa fa-robot text-primary text-2xl mr-3"></i>
+                                <span>ABB RobotStudio</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center card-hover">
+                                <i class="fa fa-chart-line text-primary text-2xl mr-3"></i>
+                                <span>MATLAB</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center card-hover">
+                                <i class="fa fa-database text-primary text-2xl mr-3"></i>
+                                <span>OpenCV</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center card-hover">
+                                <i class="fa fa-certificate text-primary text-2xl mr-3"></i>
+                                <span>工业机器人高级证书</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-center card-hover">
+                                <i class="fa fa-language text-primary text-2xl mr-3"></i>
+                                <span>英语四级</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mt-8 mb-6 flex items-center">
+                            <i class="fa fa-users text-primary mr-2"></i> 软技能
+                        </h3>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">项目管理</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">团队协作</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">问题解决</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">沟通能力</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">快速学习</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm">创新思维</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目经验 -->
+        <section id="projects" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">项目经验</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        参与多个科研和实践项目，积累了丰富的工程实践经验
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- 项目1 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/180/600/400" alt="机器人工作站虚拟仿真" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">机器人技术</span>
+                                <span class="text-sm text-gray-500">2025.08-2025.09</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">机器人工作站虚拟仿真</h3>
+                            <p class="text-gray-600 mb-4">
+                                基于ABB RobotStudio构建虚拟仿真环境，完成机器人工作站建模，通过离线编程与在线调试结合，开发码垛和划线程序。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">ABB RobotStudio</span>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">离线编程</span>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">机器人操作</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目2 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/96/600/400" alt="声源定位项目" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">人工智能</span>
+                                <span class="text-sm text-gray-500">2023.03-2023.07</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">声源定位项目</h3>
+                            <p class="text-gray-600 mb-4">
+                                利用AI技术完成代码编写，通过Python对声源信号进行滤波和特征提取，使用TDOA和相位差方法实现声源精确定位。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python</span>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">信号处理</span>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">TDOA算法</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目3 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/id/2/600/400" alt="数据集组织" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">数据处理</span>
+                                <span class="text-sm text-gray-500">2023.03-2023.07</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">研究项目数据集构建</h3>
+                            <p class="text-gray-600 mb-4">
+                                使用Python从多个网站爬取现有研究项目的基本信息，进行数据汇总，建立数据库，并进行初步数据清洗，确保数据准确性。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">Python爬虫</span>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">数据清洗</span>
+                                <span class="text-xs bg-gray-100 px-2 py-1 rounded">数据库</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 获奖情况 -->
+        <section id="awards" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">获奖情况</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        在学术和竞赛中取得的成就，体现了我的学习能力和实践创新能力
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <!-- 奖项1 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col md:flex-row gap-6 card-hover">
+                            <div class="md:w-1/5 flex justify-center md:justify-start">
+                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fa fa-trophy text-primary text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-4/5">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h3 class="text-xl font-semibold">全国大学生工程实践与创新能力大赛 全国一等奖</h3>
+                                    <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">2025年</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">
+                                    负责基于YOLOv5的垃圾识别算法开发和系统集成，实现了92%的识别准确率，完成自动分类控制逻辑设计。
+                                </p>
+                                <p class="text-sm text-gray-500">颁奖单位：教育部、工业和信息化部、中国工程院</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 奖项2 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col md:flex-row gap-6 card-hover">
+                            <div class="md:w-1/5 flex justify-center md:justify-start">
+                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fa fa-trophy text-primary text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-4/5">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h3 class="text-xl font-semibold">美国大学生数学建模竞赛 M奖（一等奖）</h3>
+                                    <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">2025年</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">
+                                    设计多元负二项回归模型预测2028年洛杉矶奥运会奖牌分布，解决数据过度分散问题，预测准确率达85%以上。
+                                </p>
+                                <p class="text-sm text-gray-500">颁奖单位：美国数学及其应用联合会（COMAP）</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 奖项3 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col md:flex-row gap-6 card-hover">
+                            <div class="md:w-1/5 flex justify-center md:justify-start">
+                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fa fa-award text-primary text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-4/5">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h3 class="text-xl font-semibold">国家励志奖学金</h3>
+                                    <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">2022-2024学年</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">
+                                    因学业成绩优异、综合素质突出获得国家励志奖学金，表彰在学习和社会实践中的优秀表现。
+                                </p>
+                                <p class="text-sm text-gray-500">颁奖单位：教育部、财政部（华侨大学代发）</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 奖项4 -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col md:flex-row gap-6 card-hover">
+                            <div class="md:w-1/5 flex justify-center md:justify-start">
+                                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fa fa-star text-primary text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-4/5">
+                                <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                                    <h3 class="text-xl font-semibold">华侨大学优秀本科生</h3>
+                                    <span class="text-sm bg-gray-100 px-3 py-1 rounded-full">2023-2024学年</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">
+                                    综合表现优异，位列本科生前3%，获得华侨大学优秀本科生荣誉称号。
+                                </p>
+                                <p class="text-sm text-gray-500">颁奖单位：华侨大学</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我 -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">联系我</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                        欢迎通过以下方式与我联系，我会尽快回复您
+                    </p>
+                </div>
+                
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div>
+                            <div class="bg-gray-50 p-8 rounded-xl h-full">
+                                <h3 class="text-xl font-semibold mb-6">联系方式</h3>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                            <i class="fa fa-phone text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium mb-1">电话</h4>
+                                            <p class="text-gray-600">18882238001</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                            <i class="fa fa-envelope text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium mb-1">邮箱</h4>
+                                            <p class="text-gray-600">SONG18882238001@163.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                            <i class="fa fa-map-marker text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium mb-1">学校</h4>
+                                            <p class="text-gray-600">华侨大学</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                            <i class="fa fa-graduation-cap text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium mb-1">专业</h4>
+                                            <p class="text-gray-600">智能制造工程</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-8">
+                                    <h4 class="font-medium mb-4">社交媒体</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-custom">
+                                            <i class="fa fa-weixin"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-custom">
+                                            <i class="fa fa-github"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary/20 text-primary rounded-full flex items-center justify-center transition-custom">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <form class="bg-gray-50 p-8 rounded-xl">
+                                <h3 class="text-xl font-semibold mb-6">发送消息</h3>
+                                
+                                <div class="space-y-4">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-custom" placeholder="您的姓名">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-custom" placeholder="您的邮箱">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">消息</label>
+                                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-custom" placeholder="请输入您想对我说的话..."></textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-custom flex items-center justify-center">
+                                        <i class="fa fa-paper-plane mr-2"></i> 发送消息
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4">宋志翔</h3>
+                <p class="text-gray-400 mb-6 max-w-md mx-auto">
+                    华侨大学智能制造工程专业本科生，致力于智能制造与人工智能技术的研究与应用
+                </p>
+                <div class="flex justify-center space-x-4 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                        <i class="fa fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                        <i class="fa fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    &copy; 2025 宋志翔 - 个人自我介绍网站. 保留所有权利.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-custom">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('py-2', 'shadow');
+                navbar.classList.remove('py-3');
+                
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.add('py-3');
+                navbar.classList.remove('py-2', 'shadow');
+                
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 返回顶部功能
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 关闭移动端菜单
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

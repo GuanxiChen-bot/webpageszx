@@ -1,0 +1,45 @@
+@layer utilities {
+    .content-auto {
+        content-visibility: auto;
+    }
+    .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    .bg-glass {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.08);
+    }
+    .card-flip {
+        perspective: 1000px;
+    }
+    .card-inner {
+        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform-style: preserve-3d;
+    }
+    .card-front, .card-back {
+        backface-visibility: hidden;
+    }
+    .card-back {
+        transform: rotateY(180deg);
+    }
+    .card-flip:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
